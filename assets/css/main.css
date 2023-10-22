@@ -157,7 +157,7 @@ input, select, textarea {
 		}
 
 	body {
-		color: #ffffff;
+		color: #424242;
 	}
 
 	body, input, select, textarea {
@@ -315,6 +315,11 @@ input, select, textarea {
 			margin: 5rem 0;
 		}
 
+	.add-padding {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+		  
 	.align-left {
 		text-align: left;
 	}
@@ -2672,6 +2677,10 @@ input, select, textarea {
 				width: 100%;
 			}
 
+			.image.fit50 img {
+				width: 50%;
+			}
+
 		.image.main {
 			display: block;
 			margin: 4rem 0;
@@ -2702,7 +2711,7 @@ input, select, textarea {
 		overflow: hidden;
 	}
 
-		a.image img {
+		/* a.image img {
 			-moz-transition: -moz-transform 0.2s ease-out;
 			-webkit-transition: -webkit-transform 0.2s ease-out;
 			-ms-transition: -ms-transform 0.2s ease-out;
@@ -2714,7 +2723,7 @@ input, select, textarea {
 			-webkit-transform: scale(1.05);
 			-ms-transform: scale(1.05);
 			transform: scale(1.05);
-		}
+		} */
 
 /* Actions */
 
@@ -3865,6 +3874,7 @@ input, select, textarea {
 			}
 
 		#main > .posts {
+			background-color: #ffffff;
 			display: -moz-flex;
 			display: -webkit-flex;
 			display: -ms-flex;
@@ -3894,23 +3904,44 @@ input, select, textarea {
 			}
 
 			#main > .posts > * {
-				width: 50%;
+				width: 33.33%;
+    			width: calc(100% / 3);
 			}
 
 			#main > .posts > * {
-				padding: 4rem;
-				width: 50%;
+				/* padding: 1.5rem; */
+				width: 33.33%;
+    			width: calc(100% / 3);
 			}
 
 			#main > .posts > article {
-				border-color: #eeeeee;
-				border-left-width: 2px;
+				padding: 1rem;
+				/* border-color: #a39a9a; */
+				border-color: #d0c4c4;
+				border-left-width: 1px;
 				border-style: solid;
-				border-top-width: 2px;
+				border-top-width: 1px;
+				border-right-width: 1px;
+				border-bottom-width: 1px;
 				text-align: center;
 			}
 
-				#main > .posts > article > :last-child {
+			#main > .posts > article > *:not(header) {
+				padding-left: 1rem;
+				padding-right: 1rem;
+			}
+			  
+			#main > .posts > article > header h2 {
+				/* padding: 0.1rem; */
+				color: #425163;
+			}
+			 
+
+			/* #main > .posts > article > .add-padding {
+				padding: 1.5rem
+			} */
+
+				/* #main > .posts > article > :last-child {
 					margin-bottom: 0;
 				}
 
@@ -3920,7 +3951,7 @@ input, select, textarea {
 
 				#main > .posts > article:nth-child(-n + 2) {
 					border-top-width: 0;
-				}
+				} */
 
 			@media screen and (max-width: 980px) {
 
@@ -4628,6 +4659,7 @@ input, select, textarea {
 			}
 
 				#navPanel .links li a {
+					color:#616161;
 					border-bottom: 0;
 					display: block;
 					font-family: "Source Sans Pro", Helvetica, sans-serif;
